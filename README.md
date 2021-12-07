@@ -26,6 +26,7 @@ steps:
 | `force-bump-patch-version`           | Increments the patch version if no changes are found                                   | Optional |
 | `changelog-generator-opt`            | Options that are passed to the changelog-generator plugin. Seperated by ","            | Optional |
 | `prepend`                            | Flag changes to be prepended into the changelog                                        | Optional |
+| `allow-no-changes`                   | Allow running when no changes are found                                                | Optional |
 
 ## Example `ci.yml` for an npm package
 

@@ -34,6 +34,9 @@ inputs:
   changelog-generator-opt:
     description: 'options that are passed to the changelog-generator plugin'
     required: false
+  allow-no-changes:
+    description: 'exit with code 0 if no changes are found, useful if semantic-release is automatically run'
+    required: false
 outputs:
   version:
     description: 'the version of the created release'

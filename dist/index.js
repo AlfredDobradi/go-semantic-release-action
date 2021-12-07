@@ -5435,6 +5435,9 @@ async function main () {
     if (core.getInput('force-bump-patch-version')) {
       args.push('--force-bump-patch-version')
     }
+    if (core.getInput('allow-no-changes')) {
+      args.push('--allow-no-changes')
+    }
     if (core.getInput('changelog-generator-opt')) {
       const changelogOpts = core.getInput('changelog-generator-opt').split(',').filter(String)
       for (let idx = 0; idx < changelogOpts.length; idx++) {
