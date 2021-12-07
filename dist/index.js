@@ -5460,7 +5460,10 @@ async function main () {
     const versionFilename = (core.getInput('dry')) ? '.version-unreleased' : '.version'
     const version = (await fs.readFile(versionFilename)).toString('utf8')
     if (core.getBooleanInput('keep-version-file') !== true) {
+      core.info(`removing ${versionFilename}`)
       await fs.unlink(versionFilename)
+    } else {
+      core.info(`keeping ${versionFilename}`)
     }
     const parsedVersion = new SemVer(version)
     core.setOutput('changelog', generatedChangelog)
